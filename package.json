@@ -1,0 +1,15 @@
+{
+  "name": "the-sustainable-frontend",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "docs:format": "prettier --write \"**/*.md\"",
+    "docs:format:check": "prettier --check \"**/*.md\"",
+    "docs:links": "markdown-link-check README.md docs/book-notes/*.md docs/problems/*.md templates/*.md",
+    "docs:check": "pnpm run docs:format:check && pnpm run docs:links"
+  },
+  "devDependencies": {
+    "markdown-link-check": "^3.14.2",
+    "prettier": "^3.8.3"
+  }
+}
