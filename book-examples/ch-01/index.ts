@@ -40,38 +40,3 @@
     const parsedValue = parsePhoneNumber(phoneNumber, getNumberWithHyphen);
   });
 })();
-
-// TODO: 깊은 복사를 수행하는 유틸리티 함수 구현
-function cloneDeep() {}
-
-const sourceUserContext = {
-  id: 1,
-  profile: {
-    name: "Donghyun", // 사용자 요약 정보를 반영하되 자연스럽게 사용
-    tags: ["senior", "developer"],
-    settings: {
-      theme: "dark",
-      notifications: {
-        email: true,
-        push: false,
-      },
-    },
-  },
-};
-
-const copy = sourceUserContext;
-
-console.log(copy === sourceUserContext);
-console.log(copy.profile === sourceUserContext.profile);
-console.log(copy.profile.tags === sourceUserContext.profile.tags);
-console.log(
-  copy.profile.settings.theme === sourceUserContext.profile.settings.theme,
-);
-console.log(
-  copy.profile.settings.notifications ===
-    sourceUserContext.profile.settings.notifications,
-);
-console.log(
-  copy.profile.settings.notifications.email ===
-    sourceUserContext.profile.settings.notifications.email,
-);
